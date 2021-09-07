@@ -1,0 +1,39 @@
+﻿@page
+@model LagkageHusWebApp.Pages.ShoppingCartModel
+@{
+}
+
+<div class="card">
+    <div class="card-header bg-primary text-white font-weight-bolder">
+        Indkøbskurv
+    </div>
+    <div class="card-body">
+        @foreach (var order in Model.Orders)
+        {
+            <div class="row" style="margin:5px;">
+                <div class="col-9">
+                    <div class="row justify-content-between">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12 font-weight-bolder">@order.Product.Name</div>
+                            </div>
+
+                            <small>a @order.Product.Price.ToString("c")</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <input class="form-control col-md-4" type="number" value="@order.Amount" style="height: 100%; width:60px; font-size: 20px" readonly/>
+                        <div class="font-weight-bold col-md-8 align-middle float-right">@((order.Amount * order.Product.Price).ToString("c"))</div>
+                    </div>
+                </div>
+            </div>
+        }
+        <hr />
+        <div class="row">
+            <div class="font-weight-bold col-12 float-right">@((Model.Orders.Sum(o => o.Amount * o.Product.Price)).ToString("c"))</div>
+        </div>
+    </div>
+    <button class="btn btn-lg btn-success">Gå til kassen</button>
+</div>
