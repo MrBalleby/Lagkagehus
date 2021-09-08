@@ -1,0 +1,46 @@
+{
+  "Products": [
+    {
+      "Id": 1,
+      "Name": "Citron kage",
+      "Price": 22,
+      "Image": "/img/citronkage.jpg",
+      "Description": "Citron kage"
+    },
+    {
+      "Id": 2,
+      "Name": "Mazarin kage",
+      "Price": 24,
+      "Image": "/img/mazarinkage.jpg",
+      "Description": "Mazarin kage"
+    },
+    {
+      "Id": 3,
+      "Name": "Kagemand",
+      "Price": 26,
+      "Image": "/img/kagemand.jpg",
+      "Description": "Kagemand"
+    },
+    {
+      "Id": 4,
+      "Name": "Romkugler",
+      "Price": 28,
+      "Image": "/img/romkugler.jpg",
+      "Description": "Romkugler"
+    },
+    {
+      "Id": 5,
+      "Name": "Jordbær drøm",
+      "Price": 30,
+      "Image": "/img/lagskage.jpg",
+      "Description": "Jordbær drøm"
+    },
+    {
+      "Id": 6,
+      "Name": "Jordbær cheesecake",
+      "Price": 32,
+      "Image": "/img/jordbaer.jpg",
+      "Description": "Jordbær cheesecake"
+    }
+  ]
+}
