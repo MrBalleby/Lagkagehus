@@ -1,0 +1,452 @@
+﻿@page
+@model LagkageHusWebApp.Pages.Index1Model
+@{
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/js/tempusdominus-bootstrap-4.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/css/tempusdominus-bootstrap-4.min.css" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function loc() {
+            var s = document.getElementById("sjaelland");
+            var j = document.getElementById("jylland");
+            var f = document.getElementById("fyn");
+            if (s.style.display === "none") {
+                s.style.display = "block";
+                j.style.display = "none";
+                f.style.display = "none";
+
+            } else {
+                s.style.display = "none";
+            }
+        }
+
+        function loc2() {
+            var s = document.getElementById("sjaelland");
+            var j = document.getElementById("jylland");
+            var f = document.getElementById("fyn");
+            if (j.style.display === "none") {
+                j.style.display = "block";
+                s.style.display = "none";
+                f.style.display = "none";
+
+            } else {
+                j.style.display = "none";
+            }
+        }
+
+        function loc3() {
+            var s = document.getElementById("sjaelland");
+            var j = document.getElementById("jylland");
+            var f = document.getElementById("fyn");
+            if (f.style.display === "none") {
+                f.style.display = "block";
+                s.style.display = "none";
+                j.style.display = "none";
+
+            } else {
+                f.style.display = "none";
+            }
+        }
+
+
+        function time() {
+            var s = document.getElementById("sjaelland");
+            var j = document.getElementById("jylland");
+            var f = document.getElementById("fyn"); 
+            var t = document.getElementById("tid");
+            if (t.style.display === "none") {
+                t.style.display = "block";
+                s.style.display = "none";
+                j.style.display = "none";
+                s.style.display = "none";
+                f.style.display = "none";
+            }
+            else {
+                t.style.display = "none";
+
+            }
+
+        }
+
+
+
+    </script>
+    <div id="wrapper">
+        <div id="product-container">
+            <center>
+                <div id="text">
+                    <h2>Vælg en lokation for afhentning</h2>
+
+                </div>
+                <button class="location" onclick="loc()"> Sjælland  </button>
+                <button class="location" onclick="loc2()"> Jylland  </button>
+                <button class="location" onclick="loc3()"> Fyn  </button>
+
+            </center>
+
+            <div id="sjaelland">
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5>Amager havn </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO1.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose" onclick="time()">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5>Hovedbanegård </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO2.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5>Kastrup lufthavn </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO3.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5> Herlev </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO4.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5>Brøndby </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO5.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5> Roskilde </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO6.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="jylland">
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5> Århus </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO1.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5>Ålborg </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO2.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5>Viborg </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO3.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5> Randers </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO4.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5>Hadsund </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO5.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5> Vejle </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO6.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="fyn">
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5> Odense </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO1.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5>Middelfart </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO2.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5>Munkebo </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO3.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5> Katteminde </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO4.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5>Svendborg </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO5.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+                </div>
+                <div class="product-card">
+                    <div class="tittle">
+                        <h5> Nyborg </h5>
+
+                    </div>
+                    <div class="product-img">
+                        <img class="fruit-cake"
+                             src="~/img/locations/LO6.png"
+                             alt="Nam Nam lige noget for Jakup">
+                    </div>
+                    <div class="choose">
+                        <center>
+                            <h3> Vælg </h3>
+                        </center>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="tid">
+                <center>
+                    <h3>Vælg Dato </h3>
+                    <input type="date"  data-date-inline-picker="true" />
+
+                </center>
+
+            </div>
+
+        </div>
+      
+
+    </div>
+
+</body>
+
+</html>

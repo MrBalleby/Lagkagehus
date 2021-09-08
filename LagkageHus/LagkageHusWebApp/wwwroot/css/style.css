@@ -39,9 +39,17 @@
 }
 
 .fruit-cake {
-  width: 15vw;
-  margin-left: 2vw;
-  }
+    width: 15vw;
+    margin-left: 2vw;
+    height: 20vh;
+}
+
+#tekst, h2 {
+    color: #4d4d4d;
+    font-weight: 700;   
+    padding: 20px;    
+}
+
 
 .price {
     background-color: #f3f3f3;
@@ -70,4 +78,46 @@
   display: inline-block;
   font-size: 16px;
   float: right;
+}
+
+.choose {
+    background-color: cornflowerblue;
+    height: 37px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+
+}
+
+
+#tid {
+    margin-top: 10px;
+    display: none;
+
+}
+
+.location {
+    border: none;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #444444;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+}
+    
+
+#sjaelland {
+    display: none;
+}
+
+#jylland {
+    display: none;
+}
+
+
+#fyn {
+    display: none;
 }
