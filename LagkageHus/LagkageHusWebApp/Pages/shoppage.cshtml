@@ -15,103 +15,27 @@
 <body>
     <div id="wrapper">
         <div id="product-container">
-            <div class="product-card">
-                <div class="tittle">
-                    <h4>Citron kage </h4>
+            @foreach (var product in Model.Products)
+            {
+                <div class="product-card">
+                    <div class="tittle">
+                        <a href="@($"/ProductDetails/{product.Id}")" style="text-decoration: none; color: inherit"><h4>@product.Name</h4></a>
+                    </div>
+                    <div class="product-img">
+                        <a href="@($"/ProductDetails/{product.Id}")">
+                            <img class="fruit-cake"
+                                 src="@product.Image"
+                                 alt="Nam Nam lige noget for Jakup">
+                        </a>
+                    </div>
+                    <div class="price">
+                        <p>@product.Price.ToString("c")</p>
+                    </div>
+                    <div class="buy">
+                        <a class="btn btn-secondary float-right" href="@($"/ProductDetails/{product.Id}")">køb</a>
+                    </div>
                 </div>
-                <div class="product-img">
-                    <img class="fruit-cake"
-                         src="~/img/citronkage.jpg"
-                         alt="Nam Nam lige noget for Jakup">
-                </div>
-                <div class="price">
-                    <p>Pris 22;- </p>   
-                </div>
-                <div class="buy">
-                    <button class="button">køb</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="tittle">
-                    <h4>Mazarin kage</h4>
-                </div>
-                <div class="product-img">
-                    <img class="fruit-cake"
-                         src="~/img/mazarinkage.jpg"
-                         alt="Nam Nam lige noget for Jakup">
-                </div>
-                <div class="price">
-                    <p>Pris 24;- </p>
-                </div>
-                <div class="buy">
-                    <button class="button">køb</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="tittle">
-                    <h4>Kagemand</h4>
-                </div>
-                <div class="product-img">
-                    <img class="fruit-cake"
-                         src="~/img/kagemand.jpg"
-                         alt="Nam Nam lige noget for Jakup">
-                </div>
-                <div class="price">
-                    <p>Pris 26;- </p>
-                </div>
-                <div class="buy">
-                    <button class="button">køb</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="tittle">
-                    <h4>Rum kugler</h4>
-                </div>
-                <div class="product-img">
-                    <img class="fruit-cake"
-                         src="~/img/romkugler.jpg"
-                         alt="Nam Nam lige noget for Jakup">
-                </div>
-                <div class="price">
-                    <p>Pris 28;- </p>
-                </div>
-                <div class="buy">
-                    <button class="button">køb</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="tittle">
-                    <h4>Jordbær drøm</h4>
-                </div>
-                <div class="product-img">
-                    <img class="fruit-cake"
-                         src="~/img/lagskage.jpg"
-                         alt="Nam Nam lige noget for Jakup">
-                </div>
-                <div class="price">
-                    <p>Pris 30;- </p>
-                </div>
-                <div class="buy">
-                    <button class="button">køb</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="tittle">
-                    <h4>Jordbær cheesecake</h4>
-                </div>
-                <div class="product-img">
-                    <img class="fruit-cake"
-                         src="~/img/jordbaer.jpg"
-                         alt="Nam Nam lige noget for Jakup">
-                </div>
-                <div class="price">
-                    <p>Pris 32;- </p>
-                </div>
-                <div class="buy">
-                    <button class="button">køb</button>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </body>

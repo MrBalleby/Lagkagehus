@@ -1,26 +1,33 @@
-﻿@page
+﻿@page "{id}"
 @model LagkageHusWebApp.Pages.ProductDetailsModel
 @{
 }
-<div class="row">
-    <div class="col-6">
-        <img src="@Model.Product.Image" style="height: 100%; width: 100%; display: block;"/>
-    </div>
-    <div class=" col-6">
-        <h1>@Model.Product.Name</h1>
-        <p>@Model.Product.Description</p>
+@if (Model.ProductFound)
+{
+    <div class="row">
+        <div class="col-6">
+            <img src="@Model.Product.Image" style="height: 100%; width: 100%; display: block;" />
+        </div>
+        <div class=" col-6">
+            <h1>@Model.Product.Name</h1>
+            <p>@Model.Product.Description</p>
 
-        <div class="row justify-content-end">
-            <div class="col">
-                <span class="float-right" style="font-size: 35px">@Model.Product.Price.ToString("c")</span>
-            </div>
-            
-            <div class="col">
-                <div class="float-right">
-                    <input type="number" min="1" value="1" style="height: 100%; width:60px; font-size: 20px" />
-                    <button class="btn btn-lg btn-primary">Køb</button>
+            <div class="row justify-content-end">
+                <div class="col">
+                    <span class="float-right" style="font-size: 35px">@Model.Product.Price.ToString("c")</span>
+                </div>
+
+                <div class="col">
+                    <div class="float-right">
+                        <input type="number" min="1" value="1" style="height: 100%; width:60px; font-size: 20px" />
+                        <button class="btn btn-lg btn-primary">Køb</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+}
+else
+{
+    <p>Product with Id: @Model.Id not found</p>
+}
