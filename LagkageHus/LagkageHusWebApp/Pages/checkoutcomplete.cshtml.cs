@@ -16,7 +16,7 @@ namespace LagkageHusWebApp.Pages
         public void SendConfirmation()
         {
             List<string> order = new List<string>();
-            order.Add("Ordre modtaget - brug kode [#8]");
+            order.Add("Ordre modtaget - brug kode [#8]\n");
             PostService.SendInformation(false, order);
         }
     }

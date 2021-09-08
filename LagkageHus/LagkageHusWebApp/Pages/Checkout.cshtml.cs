@@ -18,7 +18,7 @@ namespace LagkageHusWebApp.Pages
         public void SendOrder()
         {
             List<string> order = new List<string>();
-            order.Add("TestProduct Something citronkage.jpg 10000000 Amount=5000");
+            order.Add("TestProduct Something citronkage.jpg 10000000 Amount=5000\n");
             PostService.SendInformation(true, order);
         }
     }
