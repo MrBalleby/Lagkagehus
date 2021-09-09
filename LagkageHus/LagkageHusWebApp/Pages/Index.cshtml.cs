@@ -1,21 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LagkageHusWebApp.Models;
+using LagkageHusWebApp.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace LagkageHusWebApp.Pages
 {
-    public class IndexModel : PageModel
+    public class shoppageModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
+        public shoppageModel(IProductService productService)
         {
-            _logger = logger;
+            Products = productService.GetProducts();
         }
+
+        public List<Product> Products { get; set; }
 
         public void OnGet()
         {

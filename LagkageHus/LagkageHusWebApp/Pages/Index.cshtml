@@ -1,10 +1,42 @@
 ﻿@page
-@model IndexModel
+@model LagkageHusWebApp.Pages.shoppageModel
 @{
-    ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="product-container">
+            @foreach (var product in Model.Products)
+            {
+                <div class="product-card">
+                    <div class="tittle">
+                        <a href="@($"/ProductDetails/{product.Id}")" style="text-decoration: none; color: inherit"><h4>@product.Name</h4></a>
+                    </div>
+                    <div class="product-img">
+                        <a href="@($"/ProductDetails/{product.Id}")">
+                            <img class="fruit-cake"
+                                 src="@product.Image"
+                                 alt="Nam Nam lige noget for Jakup">
+                        </a>
+                    </div>
+                    <div class="price">
+                        <p>@product.Price.ToString("c")</p>
+                    </div>
+                    <div class="buy">
+                        <a class="btn btn-secondary float-right" href="@($"/ProductDetails/{product.Id}")">køb</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
