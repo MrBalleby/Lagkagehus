@@ -6,6 +6,9 @@
  height: 100vh;
 }*/
 
+body {
+    background-color: #99ddffa3;
+}
 
 #product-container {
     height: 90vh;
@@ -120,4 +123,13 @@
 
 #fyn {
     display: none;
+}
+
+.navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 0!important;
+    -ms-flex-align: center;
+    align-items: center;
 }
