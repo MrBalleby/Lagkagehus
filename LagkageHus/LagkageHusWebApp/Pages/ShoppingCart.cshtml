@@ -35,5 +35,5 @@
             <div class="font-weight-bold col-12 float-right">@((Model.Orders.Sum(o => o.Amount * o.Product.Price)).ToString("c"))</div>
         </div>
     </div>
-    <button class="btn btn-lg btn-success">Gå til kassen</button>
+    <a class="btn btn-lg btn-success" href="@($"/Checkout/")">Gå til kassen</a>
 </div>
